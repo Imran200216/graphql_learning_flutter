@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
+import 'package:graphql_learning_flutter/constants/app_api_constants.dart';
 import 'package:graphql_learning_flutter/extensions/provider_extensions.dart';
 import 'package:graphql_learning_flutter/log/app_logger_helper.dart';
 import 'package:graphql_learning_flutter/service/graphql_client.dart';
@@ -24,7 +25,7 @@ class CountryListScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("Countries")),
       body: FutureBuilder<GraphQLClient>(
-        future: getClient(),
+        future: getClient(baseUrl: AppApiConstants.countriesUrl),
         builder: (context, clientSnapshot) {
           if (!clientSnapshot.hasData) {
             return const Center(child: CircularProgressIndicator());

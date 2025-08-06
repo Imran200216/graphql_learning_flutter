@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:graphql_learning_flutter/providers/internet_connectivity_provider.dart';
-import 'package:graphql_learning_flutter/screens/country_list_screen.dart';
+import 'package:graphql_learning_flutter/screens/anilist_screen.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:provider/provider.dart';
 
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         ),
-        home: CountryListScreen(),
+        home: AnilistScreen(),
       ),
     );
   }
